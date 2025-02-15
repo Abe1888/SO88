@@ -1,0 +1,26 @@
+generator client {
+	provider = "prisma-client-js"
+}
+
+datasource db {
+	provider = "sqlite"
+	url      = "file:d:/Smart_AI/MEDIA-WAW/MAIN6 (2)/MAIN WITH DB/MAIN DATE 9C1 (3)/MAIN DATE 9C1/MAIN6/FormDB.db"
+}
+
+model FormSubmission {
+	id                String   @id @default(uuid())
+	companyName       String
+	contactName       String
+	email            String
+	contactNumber    String?
+	socialMedia      Json
+	branding         Json
+	contentStrategy  Json
+	engagement       Json
+	blogPost         Json
+	blogPromotion    Json
+	seoStrategy      Json
+	performanceMetrics Json
+	additionalDetails Json
+	createdAt        DateTime @default(now())
+}
